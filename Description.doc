@@ -1,0 +1,46 @@
+Overview:
+The TaskListApp is a console-based Java application that allows users to manage a list of tasks. It provides functionalities to add tasks, remove tasks by selecting their number, list all existing tasks, and quit the application.
+
+Components:
+1. TaskListApp Class:
+Purpose: This class serves as the main entry point for the Task List application. It handles user interaction through a menu-driven interface and delegates operations to the TaskList class.
+
+Methods:
+
+main(String[] args): Starts the application and manages the main loop that displays the menu and processes user inputs.
+displayMenu(): Displays the menu options for adding tasks, removing tasks, listing tasks, and quitting the application.
+getUserChoice(): Retrieves and validates the user's menu choice.
+addTask(), removeTask(), listTasks(): Methods to interact with the TaskList object based on user choices.
+exitApp(): Gracefully exits the application, closing resources like the Scanner.
+Key Concepts:
+
+User Input Handling: Uses Scanner to capture and validate user inputs.
+Menu Driven Interface: Provides a clear menu for user interaction with the application.
+Error Handling: Includes basic error handling for invalid input types (e.g., non-integer choices).
+2. TaskList Class:
+Purpose: Represents a collection of tasks stored in an ArrayList. It provides methods to manipulate this list of tasks, such as adding tasks, removing tasks by index, listing all tasks, and validating task numbers.
+
+Methods:
+
+addTask(String name): Adds a new task with the given name to the list.
+removeTask(int taskNumber): Removes the task at the specified index (1-based) from the list.
+listTasks(): Lists all tasks currently stored in the list.
+isEmpty(): Checks if the task list is empty.
+isValidTaskNumber(int taskNumber): Checks if a given task number is within the valid range of existing tasks.
+Key Concepts:
+
+Data Structure: Uses an ArrayList to store and manage tasks dynamically.
+Validation: Ensures task operations are performed within valid bounds to prevent errors.
+Interaction with TaskListApp: Provides a clean separation of concerns by handling task management independently from user interface logic.
+Usage:
+Adding Tasks: Users can add tasks by entering a task name when prompted.
+Removing Tasks: Users can remove tasks by selecting the task number from the displayed list.
+Listing Tasks: Users can view all tasks currently stored in the list.
+Quitting: Users can exit the application cleanly when done.
+Benefits:
+Simplicity: Offers a straightforward command-line interface for managing tasks.
+Flexibility: Supports dynamic addition, removal, and listing of tasks based on user input.
+Readability: Code structure and naming conventions enhance readability and maintainability.
+Considerations:
+Error Handling: Basic input validation is implemented to handle non-numeric inputs and invalid task numbers.
+Resource Management: Properly manages resources like Scanner to prevent memory leaks or resource exhaustion.
